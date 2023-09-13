@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reslut of Marks</title>
+</head>
+<body>
+	
+	<h1>Result</h1>
+	
+	
+	<!--Student is defined in controller class where post mapping is declared-->
+	<p th:text="${student.getTotal()}"></p>
+	
+	<p th:text="${student.getAvg()}"></p>
+	
+	<p th:text="${student.getGrade()}"></p>
+	
+
+</body>
+</html>

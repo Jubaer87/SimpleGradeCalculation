@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks Calculation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+CYpX3WlPzO5uUGbIl+G5pPbWf5Lw/Jf5f5Zw5HsXSEzImhFhJw5W5R5D5Zw5Q5C5O5g5" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div> <h1>Student Marks Calculation</h1></div>
+            
+            <!--Parameters of marks are accepting through this form-->
+            <form th:action="@{/result}" th:object="${student}" method="post">
+                <div>
+                    <label>Marks One</label>
+                    <input type="text" id="markOne" class="form-control" name="markOne">
+                </div>
+                <div>
+                    <label>Marks Two</label>
+                    <input type="text" id="markTwo" class="form-control" name="markTwo">
+                </div>
+                <div>
+                    <label>Marks Three</label>
+                    <input type="text" id="markThree" class="form-control" name="markThree">
+                </div>
+                <br/>
+                <div>
+                    <input type="submit" value="submit"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
